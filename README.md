@@ -61,10 +61,28 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
  * PathVarible olarak id değeri veritabanında yoksa api hata döndürmelidir.
  * Insert/Update işlemlerinde eksik data yollanırsa api hata döndürmelidir.
  * Bunların dışında beklenmeyen bir hata olduğunda tüm hataları handle edebilecek global bir hata yakalama sistemi de olmalı.
- * Error Handling Global bir merkezden yönetilmeli. Controller sınıflarının altında olmamalı.
+ * Error Handling Global bir merkezden yönetilmeli. ControllerSEL sınıflarının altında olmamalı.
  * ```@Slf4j``` hata olduğunda servera log düşürülmelidir.
  * Bu kontrolleri yapan sınıflar ```exceptions``` ve ```validations``` paketleri altına eklenebilir.
 
 ### Görev 4
  * Bir tane apinizin dönüş değerinde işlem başarılıysa hem objenin kendisini hem de işlemin başarılı olduğuna dair bir mesaj ekleyiniz.
+
+private FruitRepository fruitRepository;
+
+    @Autowired
+    public FruitServiceImpl(FruitRepository fruitRepository) {
+        this.fruitRepository = fruitRepository;
+    }
+
+
+   
  
+
+ 
+
+  
+
+  
+
+
